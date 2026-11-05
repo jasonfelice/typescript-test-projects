@@ -1,6 +1,10 @@
+type cType = "true" | "false";
+
 interface User {
   name: string;
   id: number;
+  pass: string;
+  verifyUser(id: number): boolean;
 }
 
 class UserAccount {
@@ -20,10 +24,10 @@ class UserAccount {
 
 }
 
-const user = new UserAccount("Murphy", 1, "password");
+const userX = new UserAccount("Jake", 1, "password");
 
-user.verifyUser(1);
+userX.verifyUser(1);
 
-const account: User = user;
+const account: User = userX;
 
-account.verifyUser(1); // Error: Property 'verifyUser' does not exist on type 'User'.
+account.verifyUser(1);
