@@ -10,12 +10,11 @@ interface Expense {
   expense3: number;
 }
 
-class ExpenseAccount {
+class ExpenseAccount implements Expense {
   name: string;
   expense1: number;
   expense2: number;
   expense3: number;
-
 
   constructor(name: string, expense1: number, expense2: number, expense3: number) {
     this.name = name;
