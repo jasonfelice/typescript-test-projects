@@ -19,7 +19,7 @@ obj.length = 6;
 interface SquareConfig {
   color?: string;
   width?: number;
-  [propName: string]: unknown;
+  [propName: string]: unknown; //Can have any property with any name and any type of value 
 }
 
 function createSquare(config: SquareConfig): { color: string; area: number } {
@@ -30,3 +30,7 @@ function createSquare(config: SquareConfig): { color: string; area: number } {
 }
  
 let mySquare = createSquare({ colour: "red", width: 100 });
+
+let x = { content: "Hello, World!" };
+
+console.log(x.content as string);
