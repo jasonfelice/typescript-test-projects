@@ -2,7 +2,7 @@ interface NumberDictionary {
   [index: string]: number;
  
   length: number;
-  name: string;
+  // name: string;
 }
 
 interface NumberOrStringDictionary {
@@ -13,7 +13,7 @@ interface NumberOrStringDictionary {
 
 const obj: NumberOrStringDictionary = { length: 3, name: "Example", 0: 1, 1: 2, 2: 3 };
 
-obj.length = 6;
+obj.name = "Updated";
 
 
 interface SquareConfig {
