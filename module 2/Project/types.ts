@@ -6,6 +6,6 @@ interface Transaction {
   amount: number;
   category: string;
   readonly type: TransactionType;
-  readonly date: Date;
+  readonly date: string;
   note?: string;
 }
