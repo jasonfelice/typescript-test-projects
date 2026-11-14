@@ -1,5 +1,5 @@
 const calcTotalIncome = (transactions: Transaction[]): number => {
-    let income: number = 0;
+    let income = 0;
     transactions.forEach(transaction => {
         if (transaction.type === 'income') {
             income += transaction.amount;
@@ -10,7 +10,7 @@ const calcTotalIncome = (transactions: Transaction[]): number => {
 };
 
 const calcTotalExpenses = (transactions: Transaction[]): number => {
-    let expenses: number = 0;
+    let expenses = 0;
     transactions.forEach(transaction => {
         if (transaction.type === 'expense') {
             expenses += transaction.amount;

@@ -5,7 +5,7 @@ const addTransaction = (transaction: Transaction): void => {
 };
 
 const findTransactionById = (id: number): Transaction | undefined => {
-  const transactionById: Transaction | undefined = transactions.find(transaction => transaction.id === id);
+  const transactionById = transactions.find(transaction => transaction.id === id);
   return transactionById;
 };
 
@@ -22,7 +22,7 @@ const displayTransactions = (): Transaction[] => {
 };
 
 const filterByCategory = (category: string): Transaction[] => {
-  const transactionsInCategory: Transaction[] = transactions.filter(transaction => transaction.category === category);
+  const transactionsInCategory = transactions.filter(transaction => transaction.category === category);
     console.log('Transactions By Category:');
     transactionsInCategory.forEach(transaction => {
       displayTransaction(transaction);
@@ -31,7 +31,7 @@ const filterByCategory = (category: string): Transaction[] => {
 };
 
 const filterByType = (type: 'income' | 'expense'): Transaction[] => {
-  const transactionsByType: Transaction[] = transactions.filter(transaction => transaction.type === type);
+  const transactionsByType= transactions.filter(transaction => transaction.type === type);
     console.log('Transactions By Type:');
     transactionsByType.forEach(transaction => {
       displayTransaction(transaction);
