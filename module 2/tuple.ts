@@ -24,8 +24,8 @@ const z: StringNumberBoo3 = [true, 99, 'extra', 'values'];
 
 function inButton(args: [boolean, string, ...number[]]) {
     const [isEnabled, label, ...numbers] = args;
-    return numbers;
+    return numbers[5];
 }
 
 let point = [10, 20] as const;
-let xp: [number, number] = point; //Won't work as point is readonly tuple, but xp is a mutable tuple.
+let xp: [number, number] = point; //Won't work as point is readonly tuple, but xp is a mutable tuple.s
