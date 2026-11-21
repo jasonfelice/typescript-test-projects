@@ -12,4 +12,19 @@ function smallest<Type extends { length: number }> (a: Type, b: Type) {
 
 const smallestArray = smallest([1, 2, 3], [1, 2]);
 const smallestString = smallest("hello", "hi");
-const inCorrect = smallest([1 ,2);
+const inCorrect = smallest(1 ,2);
+
+// Generic Identity Function
+function identity<Type>(value: Type[]) {
+  return [value];
+}
+
+// Return last item of an array
+function returnLast<Type extends { length: number}>(arr: Type[]) {
+  return arr[arr.length -1];
+}
+
+// Find by Id generic function
+function findById<Type extends { id: number }>(arr: Type[], id: number): Type | undefined {
+  return arr.find((item) => item.id === id);
+}
